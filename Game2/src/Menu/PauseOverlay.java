@@ -52,6 +52,8 @@ public class PauseOverlay {
 		sound_button_off = new PauseButton(x1 + 380, y1 + 240, 100, 50, "/ui/mute_x.png");
 
 	}
+	
+	
 
 	private void loadBackground() {
 		backgroundImg = GetSpriteAtlas("/ui/final menu.png");
@@ -137,6 +139,9 @@ public class PauseOverlay {
 		}
 		else if (isIn(e, sound_button_off) && !gp.soundOn && !gp.infoShow && !gp.shadingOn && !gp.storyShow) {
 			gp.soundOn = true;
+//			for(int i = 0; i< gp.soundEffect.size(); i++) {
+//				gp.soundEffect.get(i).setVolumn(0);
+//			}
 			gp.switchMusic();
 		}
 

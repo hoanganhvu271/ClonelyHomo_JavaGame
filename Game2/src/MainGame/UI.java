@@ -226,8 +226,8 @@ public class UI {
 	}
 
 	private void drawIntro(Graphics2D g2) {
-		g2.setFont(boldFont_20);
-		g2.setColor(Color.BLACK);
+		g2.setFont(boldFontBig);
+		g2.setColor(Color.WHITE);
 		introO.draw(g2);
 		
 	}
@@ -248,9 +248,7 @@ public class UI {
 	}
 
 	private void drawPlayScreen(Graphics2D g2) {
-		
-		
-		
+
 		//home_button
 		g2.setFont(boldFontBig);
 		g2.setColor(Color.WHITE);
@@ -267,10 +265,7 @@ public class UI {
 		
 		g2.drawString(text1,  gp.tileSize * 5 - 25,  gp.tileSize * 2 - 7);
 		g2.drawString(text2, gp.tileSize * 5 - 25, gp.tileSize * 2 + 23 );
-
-
-		
-		
+	
 	}
 	
 

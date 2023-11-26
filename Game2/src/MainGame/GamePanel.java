@@ -16,6 +16,7 @@ import java.util.Scanner;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import Menu.IntroOverlay;
 import Menu.PauseOverlay;
 import Menu.PlayOverlay;
 import Objects.Door;
@@ -67,6 +68,7 @@ public class GamePanel extends JPanel implements Runnable{
 	//GAMESTATES
 	public PauseOverlay po = new PauseOverlay(this);
 	public PlayOverlay playO = new PlayOverlay(this);
+	public IntroOverlay intO = new IntroOverlay(this);
 		
 	public int startTime = 0;
 	public UI ui;
@@ -318,11 +320,11 @@ public void setupGameStart() {
 	
 	public void update() {
 		
+		
 		if(gameState == pauseState) {
 			po.update();
 			//nothing to do
 		}
-		
 		if(gameState == playState) {
 //			System.out.println(player.worldX + " " + player.worldY + " " + player.solidArea.x + " "+ player.solidArea.y + " ");
 			for(int i=0; i<5; i++) upobj[i] = false;
@@ -378,8 +380,10 @@ public void setupGameStart() {
 			
 			//chi phat am thanh lan dau
 			if(player.dead == true && checkSound[2]) {
-				playSE(2, 2);
-				checkSound[2] = false;
+				if(soundOn) {
+					playSE(2, 2);
+					checkSound[2] = false;
+				}
 			}
 		}
 		
@@ -465,8 +469,8 @@ public void setupGameStart() {
 		}
 		else {
 			backgroundMusic.setVolumn(0);
-			for(Sound x : soundEffect) {
-				x.setVolumn(0);
+			for(int i = 0; i< soundEffect.size(); i++) {
+				soundEffect.get(i).setVolumn(0);
 			}
 		}
 			

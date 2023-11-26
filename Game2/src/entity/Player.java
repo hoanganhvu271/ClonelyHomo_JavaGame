@@ -178,7 +178,12 @@ public class Player extends Entity {
 
 	private void jump() {
 		if (inAir == true) return;
-		gp.playSE(1, 2);
+		
+		//fix
+		if(gp.soundOn) {
+			gp.playSE(1, 2);
+		}
+		
 		inAir = true;
 		onGround = false;
 		speedY = -13;

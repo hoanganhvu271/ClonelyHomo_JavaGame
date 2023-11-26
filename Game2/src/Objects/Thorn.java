@@ -20,7 +20,7 @@ public class Thorn extends SuperObject {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		this.solidArea = new Rectangle(0, 0, 48, 48);
+		this.solidArea = new Rectangle(0, 0, 48, 40);
 		this.solidAreaDefaultX = this.solidArea.x;
 		this.solidAreaDefaultY = this.solidArea.y;
 	}

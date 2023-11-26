@@ -91,11 +91,11 @@ public class AssetSetter {
 			
 			gp.obj[4] = new Thorn(gp);
 			gp.obj[4].worldX = 10 * gp.tileSize;
-			gp.obj[4].worldY = 12 * gp.tileSize;
+			gp.obj[4].worldY = 12 * gp.tileSize + 8;
 			
 			gp.obj[5] = new Door(gp);
 			gp.obj[5].worldX = 21 * gp.tileSize;
-			gp.obj[5].worldY = 2 * gp.tileSize;
+			gp.obj[5].worldY = 2 * gp.tileSize + 8;
 			
 			gp.obj[6] = new Elevator(gp, (Button)gp.obj[1]);
 			gp.obj[6].worldX = 12 * gp.tileSize + 1;
@@ -112,32 +112,32 @@ public class AssetSetter {
 			gp.obj[7].setElevator((Elevator)gp.obj[7], "ver");
 			
 			gp.obj[8] = new Thorn(gp);
-			gp.obj[8].worldX = 6 * gp.tileSize;
-			gp.obj[8].worldY = 7 * gp.tileSize;
+			gp.obj[8].worldX = 6 * gp.tileSize ;
+			gp.obj[8].worldY = 7 * gp.tileSize + 8;
 			
 			gp.obj[9] = new Thorn(gp);
 			gp.obj[9].worldX = 9 * gp.tileSize;
-			gp.obj[9].worldY = 7 * gp.tileSize;
+			gp.obj[9].worldY = 7 * gp.tileSize + 8;
 			
 			gp.obj[10] = new Thorn(gp);
 			gp.obj[10].worldX = 10 * gp.tileSize;
-			gp.obj[10].worldY = 7 * gp.tileSize;
+			gp.obj[10].worldY = 7 * gp.tileSize + 8;
 			
 			gp.obj[11] = new Thorn(gp);
 			gp.obj[11].worldX = 11 * gp.tileSize;
-			gp.obj[11].worldY = 7 * gp.tileSize;
+			gp.obj[11].worldY = 7 * gp.tileSize+ 8;
 			
 			gp.obj[12] = new Thorn(gp);
 			gp.obj[12].worldX = 14 * gp.tileSize;
-			gp.obj[12].worldY = 7 * gp.tileSize ;
+			gp.obj[12].worldY = 7 * gp.tileSize + 8;
 			
 			gp.obj[13] = new Thorn(gp);
 			gp.obj[13].worldX = 15 * gp.tileSize;
-			gp.obj[13].worldY = 7 * gp.tileSize;
+			gp.obj[13].worldY = 7 * gp.tileSize + 8;
 			
 			gp.obj[14] = new Thorn(gp);
 			gp.obj[14].worldX = 16 * gp.tileSize;
-			gp.obj[14].worldY = 7 * gp.tileSize;
+			gp.obj[14].worldY = 7 * gp.tileSize + 8;
 			
 			break;
 		case 1:
@@ -232,7 +232,9 @@ public class AssetSetter {
 			for(int i = 0; i < 20 ; i++) {
 				gp.obj[i] = null;
 			} 
-			
+			gp.obj[4] = new Key(gp);
+			gp.obj[4].worldX = 17 * gp.tileSize;
+			gp.obj[4].worldY = 2 * gp.tileSize;
 			gp.obj[0] = new Button(gp);
 			gp.obj[0].worldX = 6 * gp.tileSize;
 			gp.obj[0].worldY = 12 * gp.tileSize;

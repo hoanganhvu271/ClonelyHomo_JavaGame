@@ -64,8 +64,10 @@ public class Door extends SuperObject{
 	public void update(){		
 		this.win = checkCollisionPlayer();
 		if(this.win && gp.checkSound[3]) {
-			gp.checkSound[3] = false;
-			gp.playSE(3, 3);
+			if(gp.soundOn) {
+				gp.checkSound[3] = false;
+				gp.playSE(3, 3);
+			}
 		}
 		
 		if(cnt < 10)
