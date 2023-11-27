@@ -58,8 +58,8 @@ public class IntroOverlay {
         String introText = "PRESS ANY KEY TO START...";
 //        g.setFont(null);
         g.drawImage(introImage, 0, 0, gp.screenWidth, gp.screenHeight, null);
-        g.drawImage(nameImg, 2 * index, 100, 725, 491, null);
-        if(index < 110) {
+        g.drawImage(nameImg,160 , 2 * index, 900, 255, null);
+        if(index < 90) {
         	index +=3;
         }
         if(index > 60){

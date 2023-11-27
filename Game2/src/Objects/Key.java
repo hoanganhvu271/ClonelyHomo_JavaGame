@@ -18,7 +18,7 @@ public class Key extends SuperObject {
 		this.speedY = 1;
 		this.name = "Key";
 		try {
-			this.image = ImageIO.read(getClass().getResourceAsStream("/object/scibox.png"));
+			this.image = ImageIO.read(getClass().getResourceAsStream("/object/key.png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();

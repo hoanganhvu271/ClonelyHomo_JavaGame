@@ -30,13 +30,16 @@ public class AssetSetter {
 			setObject(gp.level);
 			setEntity(300, 300);
 			break;
-		case 3: 
-			setObject(3);
-			setEntity(300, 300);
-			break;
-		case 4:
+		case 3:
 			setObject(gp.level);
-			setEntity(200, 200);
+			
+			int x = 9 * gp.tileSize;
+			int y = 2 * gp.tileSize - 1;
+			setEntity(x, y);
+			break;
+		case 4: 
+			setObject(gp.level);
+			setEntity(300, 300);
 			break;
 		case 5:
 			setObject(gp.level);
@@ -94,8 +97,8 @@ public class AssetSetter {
 			gp.obj[4].worldY = 12 * gp.tileSize + 8;
 			
 			gp.obj[5] = new Door(gp);
-			gp.obj[5].worldX = 21 * gp.tileSize;
-			gp.obj[5].worldY = 2 * gp.tileSize + 8;
+			gp.obj[5].worldX = 22 * gp.tileSize;
+			gp.obj[5].worldY = 2 * gp.tileSize;
 			
 			gp.obj[6] = new Elevator(gp, (Button)gp.obj[1]);
 			gp.obj[6].worldX = 12 * gp.tileSize + 1;
@@ -147,30 +150,30 @@ public class AssetSetter {
 			}
 
 			gp.obj[0] = new Key(gp);
-			gp.obj[0].worldX = 9 * gp.tileSize;
+			gp.obj[0].worldX = 6 * gp.tileSize;
 			gp.obj[0].worldY = 2 * gp.tileSize;
 			
 			gp.obj[1] = new Key(gp);
 			gp.obj[1].worldX = 3 * gp.tileSize;
 			gp.obj[1].worldY = 2 * gp.tileSize;
 			
-			gp.obj[2] = new Button(gp);
-			gp.obj[2].worldX = 6 * gp.tileSize;
-			gp.obj[2].worldY = 12 * gp.tileSize;
-
-			gp.obj[3] = new Elevator(gp, (Button)gp.obj[2]);
-			gp.obj[3].worldX = 13 * gp.tileSize + 1;
-			gp.obj[3].worldY = 10 * gp.tileSize - 1;
-			gp.obj[3].defaultWorldX = gp.obj[3].worldX;
-			gp.obj[3].defaultWorldY = gp.obj[3].worldY;
-			gp.obj[3].setElevator((Elevator)gp.obj[3], "ver");
+//			gp.obj[2] = new Button(gp);
+//			gp.obj[2].worldX = 6 * gp.tileSize;
+//			gp.obj[2].worldY = 12 * gp.tileSize;
+//
+//			gp.obj[3] = new Elevator(gp, (Button)gp.obj[2]);
+//			gp.obj[3].worldX = 13 * gp.tileSize + 1;
+//			gp.obj[3].worldY = 10 * gp.tileSize - 1;
+//			gp.obj[3].defaultWorldX = gp.obj[3].worldX;
+//			gp.obj[3].defaultWorldY = gp.obj[3].worldY;
+//			gp.obj[3].setElevator((Elevator)gp.obj[3], "ver");
 			
-			gp.obj[4] = new Thorn(gp);
-			gp.obj[4].worldX = 12 * gp.tileSize;
-			gp.obj[4].worldY = 12 * gp.tileSize;
+//			gp.obj[4] = new Thorn(gp);
+//			gp.obj[4].worldX = 12 * gp.tileSize;
+//			gp.obj[4].worldY = 12 * gp.tileSize;
 			
 			gp.obj[5] = new Door(gp);
-			gp.obj[5].worldX = 19 * gp.tileSize;
+			gp.obj[5].worldX = 14 * gp.tileSize;
 			gp.obj[5].worldY = 11 * gp.tileSize;
 			
 			break;
@@ -228,58 +231,98 @@ public class AssetSetter {
 			gp.obj[13].worldY = 2 * gp.tileSize;
 			
 			break;
+	
+			
 		case 3:
 			for(int i = 0; i < 20 ; i++) {
 				gp.obj[i] = null;
 			} 
-			gp.obj[4] = new Key(gp);
-			gp.obj[4].worldX = 17 * gp.tileSize;
-			gp.obj[4].worldY = 2 * gp.tileSize;
-			gp.obj[0] = new Button(gp);
-			gp.obj[0].worldX = 6 * gp.tileSize;
-			gp.obj[0].worldY = 12 * gp.tileSize;
-
-			gp.obj[1] = new Elevator(gp, (Button)gp.obj[0]);
-			gp.obj[1].worldX = 16 * gp.tileSize + 1;
-			gp.obj[1].worldY = 11 * gp.tileSize - 1;
-			gp.obj[1].defaultWorldX = gp.obj[1].worldX;
-			gp.obj[1].defaultWorldY = gp.obj[1].worldY;
-			gp.obj[1].setElevator((Elevator)gp.obj[1], "ver");
-			
-			gp.obj[2] = new Door(gp);
-			gp.obj[2].worldX = 1 * gp.tileSize;
-			gp.obj[2].worldY = 10 * gp.tileSize;
-			
-			break;
-		
-		case 4:
-			for(SuperObject x:gp.obj) x = null; 
 			gp.obj[0] = new Key(gp);
-			gp.obj[0].worldX = 9 * gp.tileSize;
-			gp.obj[0].worldY = 2 * gp.tileSize;
+			gp.obj[0].worldX = 11 * gp.tileSize;
+			gp.obj[0].worldY = 8 * gp.tileSize - 1;
 			
 			gp.obj[1] = new Key(gp);
-			gp.obj[1].worldX = 3 * gp.tileSize;
-			gp.obj[1].worldY = 2 * gp.tileSize;
+			gp.obj[1].worldX = 15 * gp.tileSize;
+			gp.obj[1].worldY = 6 * gp.tileSize - 1;
 			
 			gp.obj[2] = new Button(gp);
 			gp.obj[2].worldX = 6 * gp.tileSize;
 			gp.obj[2].worldY = 12 * gp.tileSize;
 
 			gp.obj[3] = new Elevator(gp, (Button)gp.obj[2]);
-			gp.obj[3].worldX = 13 * gp.tileSize + 1;
+			gp.obj[3].worldX = 5 * gp.tileSize + 2;
 			gp.obj[3].worldY = 10 * gp.tileSize - 1;
 			gp.obj[3].defaultWorldX = gp.obj[3].worldX;
 			gp.obj[3].defaultWorldY = gp.obj[3].worldY;
 			gp.obj[3].setElevator((Elevator)gp.obj[3], "hor");
 			
 			gp.obj[4] = new Thorn(gp);
-			gp.obj[4].worldX = 10 * gp.tileSize;
-			gp.obj[4].worldY = 12 * gp.tileSize;
+			gp.obj[4].worldX = 5 * gp.tileSize;
+			gp.obj[4].worldY = 7 * gp.tileSize + 8;
+                        
+//                        gp.obj[6] = new Thorn(gp);
+//			gp.obj[6].worldX = 13 * gp.tileSize;
+//			gp.obj[6].worldY = 5 * gp.tileSize;
 			
 			gp.obj[5] = new Door(gp);
-			gp.obj[5].worldX = 19 * gp.tileSize;
-			gp.obj[5].worldY = 11 * gp.tileSize;
+			gp.obj[5].worldX = 20 * gp.tileSize;
+			gp.obj[5].worldY = 2 * gp.tileSize;
+			
+			break;
+		
+	
+		case 4:
+			for(int i = 0; i < 20 ; i++) {
+				gp.obj[i] = null;
+			} 
+//			gp.obj[0] = new Key(gp);
+//			gp.obj[0].worldX = 9 * gp.tileSize;
+//			gp.obj[0].worldY = 2 * gp.tileSize;
+			
+			gp.obj[5] = new Button(gp);
+			gp.obj[5].worldX = 9 * gp.tileSize;
+			gp.obj[5].worldY = 12 * gp.tileSize;
+			
+			gp.obj[6] = new Button(gp);
+			gp.obj[6].worldX = 21 * gp.tileSize;
+			gp.obj[6].worldY = 8 * gp.tileSize;
+			
+			gp.obj[7] = new Button(gp);
+			gp.obj[7].worldX = 9 * gp.tileSize;
+			gp.obj[7].worldY = 5 * gp.tileSize;
+
+			gp.obj[8] = new Elevator(gp, (Button)gp.obj[5]);
+			gp.obj[8].worldX = 13 * gp.tileSize + 1;
+			gp.obj[8].worldY = 11 * gp.tileSize - 1;
+			gp.obj[8].defaultWorldX = gp.obj[8].worldX;
+			gp.obj[8].defaultWorldY = gp.obj[8].worldY;
+			gp.obj[8].setElevator((Elevator)gp.obj[8], "hor");
+			
+			gp.obj[9] = new Elevator(gp, (Button)gp.obj[7]);
+			gp.obj[9].worldX = 15  * gp.tileSize + 1;
+			gp.obj[9].worldY = 4 * gp.tileSize - 1;
+			gp.obj[9].defaultWorldX = gp.obj[9].worldX;
+			gp.obj[9].defaultWorldY = gp.obj[9].worldY;
+			gp.obj[9].setElevator((Elevator)gp.obj[9], "hor");
+			
+			gp.obj[10] = new Elevator(gp, (Button)gp.obj[6]);
+			gp.obj[10].worldX = 16 * gp.tileSize + 1;
+			gp.obj[10].worldY = 8 * gp.tileSize - 1;
+			gp.obj[10].defaultWorldX = gp.obj[10].worldX;
+			gp.obj[10].defaultWorldY = gp.obj[10].worldY;
+			gp.obj[10].setElevator((Elevator)gp.obj[10], "ver");
+			
+			gp.obj[11] = new Thorn(gp);
+			gp.obj[11].worldX = 19 * gp.tileSize;
+			gp.obj[11].worldY = 3 * gp.tileSize;
+			
+			gp.obj[12] = new Thorn(gp);
+			gp.obj[12].worldX = 20 * gp.tileSize;
+			gp.obj[12].worldY = 3 * gp.tileSize;
+			
+			gp.obj[13] = new Door(gp);
+			gp.obj[13].worldX = 21 * gp.tileSize;
+			gp.obj[13].worldY = 2 * gp.tileSize;
 			
 			break;
 		case 5:

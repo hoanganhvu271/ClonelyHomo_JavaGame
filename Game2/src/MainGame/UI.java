@@ -254,17 +254,19 @@ public class UI {
 		g2.setColor(Color.WHITE);
 		playO.draw(g2);
 		
+		
+		
 		//img
-		BufferedImage img = GetSpriteAtlas("/ui/leveltext.png");
-		g2.drawImage(img, gp.tileSize * 2 , gp.tileSize * 1 - 40 , 230, 130, null);
+		BufferedImage img = GetSpriteAtlas("/ui/level_status_img.png");
+		g2.drawImage(img, gp.tileSize * 2 , gp.tileSize * 1 - 40 , 190, 126, null);
 		
 		//text_status
 		String text1 = String.format("%d", gp.level);
 		String text2 = "x" + String.format("%d", 5 - gp.quantityClone );
 	
 		
-		g2.drawString(text1,  gp.tileSize * 5 - 25,  gp.tileSize * 2 - 7);
-		g2.drawString(text2, gp.tileSize * 5 - 25, gp.tileSize * 2 + 23 );
+		g2.drawString(text1,  gp.tileSize * 5 - 25,  gp.tileSize * 2 - 15);
+		g2.drawString(text2, gp.tileSize * 5 - 25, gp.tileSize * 2 + 16 );
 	
 	}
 	
