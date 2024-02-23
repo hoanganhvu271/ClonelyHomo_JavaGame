@@ -1,4 +1,4 @@
-**Java Game 2D**
+<h1> Java Game 2D </h1>
 
 **Name:** Clonely Homo
 
