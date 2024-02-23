@@ -1,8 +1,8 @@
-Java Game 2D
-Name: Clonely Homo
+**Java Game 2D**
+**Name:** Clonely Homo
 A project in Object-Oriented Programming course
 
-Download: https://nghhie.itch.io/clonely-homo
+**Download:** https://nghhie.itch.io/clonely-homo
 
 ![Menu]()
 
